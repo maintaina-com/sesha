@@ -1,7 +1,7 @@
 {
     "name": "horde/sesha",
     "description": "Inventory application",
-    "type": "project",
+    "type": "horde-application",
     "homepage": "https://www.horde.org/apps/sesha",
     "license": "GPL-2.0",
     "authors": [
@@ -17,33 +17,34 @@
         }
     ],
     "version": "1.0.0RC4",
-    "time": "2017-11-11",
+    "time": "2020-10-27",
     "repositories": [
         {
-            "type": "pear",
-            "url": "https://pear.horde.org"
+            "type": "composer",
+            "url": "https://horde-satis.maintaina.com"
         }
     ],
     "require": {
+        "horde/horde-installer-plugin": "dev-master",
         "php": "^5.3 || ^7",
-        "pear-pear.horde.org/horde": "^5",
-        "pear-pear.horde.org/Horde_Auth": "^2",
-        "pear-pear.horde.org/Horde_Autoloader": "^2",
-        "pear-pear.horde.org/Horde_Core": "^2",
-        "pear-pear.horde.org/Horde_Db": "^2",
-        "pear-pear.horde.org/Horde_Exception": "^2",
-        "pear-pear.horde.org/Horde_Form": "^2",
-        "pear-pear.horde.org/Horde_Perms": "^2",
-        "pear-pear.horde.org/Horde_Prefs": "^2",
-        "pear-pear.horde.org/Horde_Rdo": "^2"
+        "horde/horde": "dev-master",
+        "horde/auth": "dev-master",
+        "horde/autoloader": "dev-master",
+        "horde/core": "dev-master",
+        "horde/db": "dev-master",
+        "horde/exception": "dev-master",
+        "horde/form": "dev-master",
+        "horde/perms": "dev-master",
+        "horde/prefs": "dev-master",
+        "horde/rdo": "dev-master"
     },
-    "replace": {
-        "pear-pear.horde.org/sesha": "1.*",
-        "pear-horde/sesha": "1.*"
-    },
+    "suggest": {},
     "autoload": {
         "psr-0": {
             "Sesha": "lib/"
         }
-    }
+    },
+    "bin": [
+        "bin/sesha-add-stock"
+    ]
 }
